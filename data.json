@@ -48,40 +48,59 @@
     },
     {
       "name": "星空pet",
-      "publishMonth": "2025-03",
+      "publishMonth": "2026-07-15",
       "category1": "馒头",
       "category2": "1000+",
-      "cover": "https://cdn.phototourl.com/free/2026-06-23-9ea8901e-2cc7-45a9-b2bd-0907dbc4b2d7.jpg",
-      "icon": "https://cdn.phototourl.com/free/2026-07-17-93a9795f-76ca-4713-aac2-4c703664f51d.png",
+      "cover": "https://cdn.phototourl.com/free/2026-07-18-b6856ca1-f260-4ea4-a013-848611cf5b09.jpg",
+      "icon": "https://cdn.phototourl.com/free/2026-07-18-2a0fb2f6-83e7-49d2-9c9a-a1168e7f1f08.jpg",
       "background": "https://cdn.phototourl.com/free/2026-06-23-401d6c32-db2c-4d8a-bde4-f98e97a8dc52.jpg",
-      "period": "45天",
-      "yield": "180%",
-      "investment": "投入 0元，适合有一定经验、追求更高收益的玩家。",
-      "intro": "星河进阶是中等投入的馒头项目，收益曲线更陡，配套社群陪跑与专属客服，适合想要放大收益的用户。",
+      "period": "45天左右保底",
+      "yield": "无上限收益",
+      "investment": "投入1316馒头，购入八张盲盒卡，需要预定，由上级发放盲盒到你的邮箱，你需要提供上级你的uid",
+      "intro": "1316——bp车                                 1316+上级贡献返点90——扶持车\n认证：单设备可以通过切换登录实现一机多号，不可多开，一个ip对应一个设备，实名需要登录手机号一致\n道具核心：星空钥匙+星空晶体（转赠需要1:1）\n盲盒的目的是：激活生产线，稳定产出星空晶体，每开一个盲盒赠送60星空钥匙，一个号上限7盲盒，也就是420钥匙，可以用于星空矿山用来开钥匙矿，四个一百矿，两个十矿，三十天周期",
       "items": [
         {
-          "image": "https://placehold.co/300x200/FF9EC4/15102B?text=核心道具",
-          "value": "星核 ×1：解锁高阶收益通道"
+          "image": "https://cdn.phototourl.com/free/2026-07-18-6deb50f9-07ac-4c69-b486-85f9a2de2585.png",
+          "value": "星空晶体"
+        },
+        {
+          "image": "https://cdn.phototourl.com/free/2026-07-18-49f3f268-8a0a-40a2-8c26-0a3a1ba458fb.png",
+          "value": "星空钥匙"
         }
       ],
       "gameplay": [
         {
           "step": "1",
-          "image": "https://placehold.co/600x300/FFD166/15102B?text=步骤1",
-          "text": "购买星核"
+          "image": "https://cdn.phototourl.com/free/2026-07-18-ad6190e1-7340-4950-9816-2a71da934ef8.png",
+          "text": "点击绿藤星进入世界，点击邮箱领取盲盒"
         },
         {
           "step": "2",
           "image": "https://placehold.co/600x300/6EE7B7/15102B?text=步骤2",
-          "text": "按社群节奏完成每日进阶任务。"
+          "text": "点击“星空家园——储物戒”"
         },
         {
           "step": "3",
           "image": "https://placehold.co/600x300/B388FF/15102B?text=步骤3",
-          "text": "45 天周期结束，整体收益率约 180%。"
+          "text": "开启盲盒并激活，公仔可以寄到家里，点击兑换即可"
+        },
+        {
+          "step": "4",
+          "image": "",
+          "text": "生产线有每天星空晶体产出"
+        },
+        {
+          "step": "5",
+          "image": "",
+          "text": "点击星空矿山进入星空钥匙矿脉，开四个100的，2个10的即可"
+        },
+        {
+          "step": "6",
+          "image": "",
+          "text": "点击头像可以利用每天产出的晶体和钥匙转赠变现"
         }
       ],
-      "download": "https://example.com/download/mantou2",
+      "download": "https://invite.xkpet.com/?code=JH0LI0R3",
       "id": "p_demo002"
     },
     {
