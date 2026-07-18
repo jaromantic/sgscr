@@ -1,0 +1,127 @@
+{
+  "site": {
+    "homeBg": "https://cdn.phototourl.com/free/2026-06-23-9ea8901e-2cc7-45a9-b2bd-0907dbc4b2d7.jpg"
+  },
+  "projects": [
+    {
+      "background": "https://picsum.photos/seed/mantou1/1600/900",
+      "category1": "馒头",
+      "category2": "0-100",
+      "cover": "https://placehold.co/1200x400/FF9EC4/15102B?text=晨光小铺",
+      "download": "https://example.com/download/mantou1",
+      "gameplay": [
+        {
+          "image": "https://placehold.co/600x300/6EE7B7/15102B?text=步骤1",
+          "step": 1,
+          "text": "注册账号并绑定启动卡，完成新手引导。"
+        },
+        {
+          "image": "https://placehold.co/600x300/B388FF/15102B?text=步骤2",
+          "step": 2,
+          "text": "每日签到领取任务，使用加速券提升结算速度。"
+        },
+        {
+          "image": "https://placehold.co/600x300/FF9EC4/15102B?text=步骤3",
+          "step": 3,
+          "text": "满 30 天提现，收益率约 120%。"
+        }
+      ],
+      "icon": "https://placehold.co/120x120/B388FF/15102B?text=店",
+      "id": "p_demo001",
+      "inCarousel": true,
+      "intro": "晨光小铺是一个低门槛的入门级馒头项目，主打稳定日收益与零门槛操作，配套图文教程，新手也能轻松上手。",
+      "investment": "投入 88 元，周期短、回本快，适合新手试水。",
+      "items": [
+        {
+          "image": "https://placehold.co/300x200/8C9EFF/15102B?text=道具A",
+          "value": "启动卡 ×1：解锁每日任务入口"
+        },
+        {
+          "image": "https://placehold.co/300x200/FFD166/15102B?text=道具B",
+          "value": "加速券 ×3：收益结算提速 50%"
+        }
+      ],
+      "name": "晨光小铺·入门馒头",
+      "period": "30天",
+      "publishMonth": "2025-01",
+      "yield": "120%"
+    },
+    {
+      "name": "星空pet1111111111",
+      "publishMonth": "2025-03",
+      "category1": "馒头",
+      "category2": "1000+",
+      "cover": "https://cdn.phototourl.com/free/2026-06-23-9ea8901e-2cc7-45a9-b2bd-0907dbc4b2d7.jpg",
+      "icon": "https://cdn.phototourl.com/free/2026-07-17-93a9795f-76ca-4713-aac2-4c703664f51d.png",
+      "background": "https://cdn.phototourl.com/free/2026-06-23-401d6c32-db2c-4d8a-bde4-f98e97a8dc52.jpg",
+      "period": "45天",
+      "yield": "180%",
+      "investment": "投入 0元，适合有一定经验、追求更高收益的玩家。",
+      "intro": "星河进阶是中等投入的馒头项目，收益曲线更陡，配套社群陪跑与专属客服，适合想要放大收益的用户。",
+      "items": [
+        {
+          "image": "https://placehold.co/300x200/FF9EC4/15102B?text=核心道具",
+          "value": "星核 ×1：解锁高阶收益通道"
+        }
+      ],
+      "gameplay": [
+        {
+          "step": "1",
+          "image": "https://placehold.co/600x300/FFD166/15102B?text=步骤1",
+          "text": "购买星核"
+        },
+        {
+          "step": "2",
+          "image": "https://placehold.co/600x300/6EE7B7/15102B?text=步骤2",
+          "text": "按社群节奏完成每日进阶任务。"
+        },
+        {
+          "step": "3",
+          "image": "https://placehold.co/600x300/B388FF/15102B?text=步骤3",
+          "text": "45 天周期结束，整体收益率约 180%。"
+        }
+      ],
+      "download": "https://example.com/download/mantou2",
+      "id": "p_demo002"
+    },
+    {
+      "background": "https://picsum.photos/seed/linglu1/1600/900",
+      "category1": "零撸",
+      "category2": null,
+      "cover": "https://placehold.co/1200x400/8C9EFF/15102B?text=零撸日常",
+      "download": "https://example.com/download/linglu1",
+      "gameplay": [
+        {
+          "image": "https://placehold.co/600x300/6EE7B7/15102B?text=步骤1",
+          "step": 1,
+          "text": "领取每日零撸任务清单。"
+        },
+        {
+          "image": "https://placehold.co/600x300/B388FF/15102B?text=步骤2",
+          "step": 2,
+          "text": "完成看视频、打卡等轻量任务。"
+        },
+        {
+          "image": "https://placehold.co/600x300/FF9EC4/15102B?text=步骤3",
+          "step": 3,
+          "text": "累积到阈值即可提现，全程零投入。"
+        }
+      ],
+      "icon": "https://placehold.co/120x120/FF9EC4/15102B?text=撸",
+      "id": "p_demo003",
+      "inCarousel": true,
+      "intro": "微风零撸是一个完全不需要投入的项目，利用碎片时间做任务即可累积收益，门槛极低、风险为零。",
+      "investment": "零投入，纯靠日常操作积累，适合碎片时间。",
+      "items": [
+        {
+          "image": "https://placehold.co/300x200/FFD166/15102B?text=日常卡",
+          "value": "日常卡 ×1：开启每日零撸任务"
+        }
+      ],
+      "name": "微风·零撸日常",
+      "period": "长期",
+      "publishMonth": "2025-02",
+      "yield": "0投入"
+    }
+  ]
+}
