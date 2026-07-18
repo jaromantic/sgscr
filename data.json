@@ -82,8 +82,7 @@
         }
       ],
       "download": "https://example.com/download/mantou2",
-      "id": "p_demo002",
-      "inCarousel": true
+      "id": "p_demo002"
     },
     {
       "background": "https://picsum.photos/seed/linglu1/1600/900",
