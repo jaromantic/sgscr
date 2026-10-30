@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error>
+  <Code>NoSuchKey</Code>
+  <Message>The specified key does not exist.</Message>
+  <RequestId>6AE390180B81D8333481D57E</RequestId>
+  <HostId>content-h5.oss-cn-beijing.aliyuncs.com</HostId>
+  <Key>online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6//assets/cinematics/ending.mp4</Key>
+  <EC>0026-00000001</EC>
+  <RecommendDoc>https://api.aliyun.com/troubleshoot?q=0026-00000001</RecommendDoc>
+</Error>
