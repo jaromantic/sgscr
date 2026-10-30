@@ -1,249 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>飞鸢动力笺 · 四旋翼桨叶选型</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+<meta name="theme-color" content="#171321" />
+<meta name="screen-orientation" content="landscape" />
+<meta name="x5-orientation" content="landscape" />
+<meta name="description" content="奶蛙勇闯憋笑城堡，肚皮冲撞、大笑清场！闯过七关救出豆公主。免下载，手机电脑都能玩。【奶龙魔改·网页版】" />
+<meta property="og:title" content="勇者奶蛙传：关于如何从憋笑魔王手中救下公主这件事" />
+<meta property="og:description" content="一肚子撞进城堡，一口气笑翻魔王。来挑战你的救援纪录！" />
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<title>勇者奶蛙传【奶龙魔改·网页版】</title>
+<script type="module" crossorigin src="./assets/game-BDvRcsxG.js"></script>
+<script src="./assets/mod.js"></script>
+<link rel="stylesheet" crossorigin src="./assets/game-DhG0Y0Ys.css">
 <style>
-  :root{
-    --纸:#f4ecd8;
-    --纸深:#e8dcbf;
-    --墨:#2b2620;
-    --墨淡:#5c5243;
-    --朱:#a93226;
-    --青:#1f6f5c;
-    --边:#cbb994;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html,body{background:#d9cdb0;}
-  body{
-    font-family:"Songti SC","STSong","Noto Serif CJK SC",serif;
-    color:var(--墨);
-    line-height:1.9;
-    padding:0 0 60px;
-    -webkit-font-smoothing:antialiased;
-  }
-  /* 卷轴两端轴头 */
-  .轴顶{height:26px;background:linear-gradient(180deg,#7a2e1f,#4a1c12 60%,#7a2e1f);position:relative;box-shadow:0 4px 10px rgba(0,0,0,.25);}
-  .轴顶::after{content:"";position:absolute;left:50%;top:2px;transform:translateX(-50%);width:46%;height:10px;background:repeating-linear-gradient(90deg,#d9b26a,#d9b26a 6px,#b8863b 6px,#b8863b 12px);border-radius:4px;}
-  .卷轴{max-width:820px;margin:0 auto;background:
-      radial-gradient(circle at 12% 20%,rgba(139,115,70,.10),transparent 45%),
-      radial-gradient(circle at 85% 60%,rgba(139,115,70,.08),transparent 50%),
-      linear-gradient(180deg,var(--纸),var(--纸深));
-    box-shadow:0 0 0 1px rgba(120,100,60,.25), 0 18px 50px rgba(60,45,20,.35);
-    padding:34px 26px 50px;
-    position:relative;
-  }
-  .卷轴::before{content:"";position:absolute;inset:14px;border:1.5px solid rgba(120,100,60,.35);pointer-events:none;}
-  .卷轴::after{content:"";position:absolute;inset:20px;border:.5px solid rgba(120,100,60,.25);pointer-events:none;}
-  /* 抬头 */
-  header{text-align:center;margin-bottom:26px;position:relative;}
-  .题签{display:inline-block;background:var(--朱);color:#f6edd6;padding:4px 18px;font-size:13px;letter-spacing:6px;border-radius:2px;box-shadow:0 3px 0 rgba(120,40,30,.4);transform:rotate(-1.2deg);}
-  h1{font-size:34px;letter-spacing:10px;margin:16px 0 6px;font-weight:700;}
-  .副题{font-size:15px;color:var(--墨淡);letter-spacing:3px;}
-  .朱线{width:60%;height:2px;margin:18px auto 0;background:repeating-linear-gradient(90deg,var(--朱) 0 10px,transparent 10px 18px);opacity:.75;}
-  /* 诗引 */
-  .诗引{font-style:italic;color:var(--墨淡);text-align:center;font-size:15px;margin:18px 10px 8px;letter-spacing:2px;}
-  .诗引 span{display:inline-block;transform:rotate(-.6deg);}
-  /* 章标题 */
-  .章{display:flex;align-items:center;gap:12px;margin:34px 0 14px;}
-  .章 .序{background:var(--墨);color:var(--纸);width:34px;height:34px;flex:0 0 34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 0 0 3px rgba(43,38,32,.08);}
-  .章 h2{font-size:21px;letter-spacing:4px;border-bottom:1.5px dashed var(--边);flex:1;padding-bottom:6px;}
-  .章 .批{font-size:12px;color:var(--朱);letter-spacing:1px;white-space:nowrap;}
-  /* 已知笺 */
-  .笺{background:rgba(255,255,255,.35);border:1px solid var(--边);border-radius:3px;padding:14px 16px;margin:12px 0;position:relative;}
-  .笺 .标{position:absolute;top:-11px;left:14px;background:var(--青);color:#f0f6ef;font-size:12px;letter-spacing:3px;padding:2px 12px;border-radius:2px;}
-  .笺 ul{list-style:none;padding-top:6px;}
-  .笺 li{font-size:15px;padding:2px 0;}
-  .笺 li b{color:var(--朱);font-weight:700;}
-  /* 涂鸦公式卡片 */
-  .卡{background:rgba(255,255,255,.42);border:1px solid var(--边);border-left:4px solid var(--墨);border-radius:3px;padding:12px 16px 14px;margin:12px 0;position:relative;box-shadow:2px 3px 0 rgba(120,100,60,.12);}
-  .卡 .号{position:absolute;top:-10px;right:12px;background:var(--纸);border:1px solid var(--边);border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--墨淡);}
-  .卡 .式{font-family:"Cambria Math","Times New Roman",serif;font-size:19px;color:var(--墨);letter-spacing:1px;text-align:center;margin:6px 0 4px;}
-  .卡 .名{font-size:13px;color:var(--墨淡);text-align:center;letter-spacing:2px;}
-  .卡 .释{font-size:13.5px;color:var(--墨淡);margin-top:6px;padding-top:6px;border-top:.5px dashed var(--边);}
-  .卡 .释 i{font-style:normal;color:var(--墨);}
-  .卡.朱{border-left-color:var(--朱);}
-  .卡.青{border-left-color:var(--青);}
-  /* 双列 */
-  .双列{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  @media(max-width:560px){.双列{grid-template-columns:1fr;}}
-  /* 表格 */
-  .表外{border:1px solid var(--边);border-radius:3px;overflow:hidden;margin:14px 0;background:rgba(255,255,255,.4);}
-  table{width:100%;border-collapse:collapse;font-size:13.5px;text-align:center;}
-  th{background:rgba(43,38,32,.88);color:var(--纸);font-weight:400;letter-spacing:2px;padding:9px 6px;}
-  td{padding:8px 6px;border-top:.5px solid var(--边);}
-  tr:nth-child(even) td{background:rgba(255,255,255,.28);}
-  td.左{text-align:left;padding-left:12px;}
-  .优{color:var(--青);font-weight:700;}
-  .劣{color:var(--朱);font-weight:700;}
-  /* 结论 */
-  .定论{margin:16px 0;padding:18px 20px;background:linear-gradient(135deg,rgba(43,38,32,.94),rgba(60,50,40,.94));color:var(--纸);border-radius:3px;position:relative;box-shadow:0 6px 18px rgba(40,30,15,.3);}
-  .定论 .朱印{position:absolute;top:14px;right:16px;width:52px;height:52px;border:2.5px solid var(--朱);color:var(--朱);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:17px;letter-spacing:2px;writing-mode:vertical-rl;line-height:1.2;opacity:.92;transform:rotate(3deg);}
-  .定论 h3{font-size:19px;letter-spacing:5px;margin-bottom:10px;color:#f0e6c8;}
-  .定论 p{font-size:15px;margin:6px 0;color:#e8dfc6;}
-  .定论 .选{font-size:17px;color:#f3d99a;letter-spacing:2px;}
-  .定论 .选 b{font-size:22px;}
-  /* 脚注 */
-  footer{margin-top:34px;text-align:center;font-size:12.5px;color:var(--墨淡);letter-spacing:2px;}
-  footer .线{width:40%;height:1px;margin:0 auto 12px;background:var(--边);}
-  .飞白{font-family:cursive;color:rgba(120,100,60,.35);font-size:26px;letter-spacing:6px;text-align:right;margin-top:6px;transform:rotate(-2deg);}
+body{margin:0;background:#0a0e14;overflow:hidden}
+#nm-web-hint{position:fixed;bottom:8px;left:0;right:0;z-index:1000001;text-align:center;
+ font-family:system-ui,sans-serif;font-size:12px;color:rgba(234,230,247,.55);
+ pointer-events:none;text-shadow:0 1px 3px rgba(0,0,0,.8)}
 </style>
 </head>
 <body>
-<div class="轴顶"></div>
-<div class="卷轴">
-
-  <header>
-    <div class="题签">工 程 笔 记</div>
-    <h1>飞鸢动力笺</h1>
-    <div class="副题">四旋翼桨叶综合选型 · 五算求解</div>
-    <div class="朱线"></div>
-  </header>
-
-  <div class="诗引"><span>「振六寸之羽，承二斤之重；审电流如量薪，计续航若观漏。」</span></div>
-
-  <!-- 壹 已知条件 -->
-  <div class="章">
-    <div class="序">壹</div>
-    <h2>已知 · 机与约束</h2>
-    <div class="批">审题为先</div>
-  </div>
-  <div class="笺">
-    <div class="标">机 架 · 电 源 · 动 力</div>
-    <ul>
-      <li>机型：<b>四旋翼</b>，最大起飞质量 <b>M = 2.4 kg</b></li>
-      <li>电源：<b>6S</b>，22.2 V / <b>5 Ah</b> / <b>25C</b></li>
-      <li>电机：500 KV，持续电流 <b>25 A</b></li>
-      <li>电调 ESC：持续 <b>35 A</b></li>
-      <li>任务：悬停与低速巡航；静推重比 <b>≥ 2.0</b></li>
-      <li>机架：电机中心距 <b>L = 360 mm</b>；桨尖净距 <b>≥ 20 mm</b></li>
-    </ul>
-  </div>
-
-  <!-- 贰 公式 -->
-  <div class="章">
-    <div class="序">贰</div>
-    <h2>公式 · 五条纲要</h2>
-    <div class="批">总纲立算</div>
-  </div>
-
-  <div class="双列">
-    <div class="卡">
-      <div class="号">一</div>
-      <div class="式">F<sub>悬停</sub> = Mg / 4</div>
-      <div class="名">单台悬停推力</div>
-      <div class="释"><i>Mg</i> 为整机重力，四机均分。本案 0.6 kgf。</div>
-    </div>
-    <div class="卡">
-      <div class="号">二</div>
-      <div class="式">F<sub>max</sub> = 2.0 · Mg / 4</div>
-      <div class="名">单台所需最大推力</div>
-      <div class="释">静推重比 ≥2.0 之要求，得 <i>1.2 kgf</i> 为门槛。</div>
-    </div>
-  </div>
-  <div class="双列">
-    <div class="卡 青">
-      <div class="号">三</div>
-      <div class="式">D<sub>max</sub> = L − d<sub>净距</sub></div>
-      <div class="名">桨叶允许最大直径</div>
-      <div class="释">相邻两桨半径之和不可逾中心距减净距。本案 <i>340 mm</i>。</div>
-    </div>
-    <div class="卡 青">
-      <div class="号">四</div>
-      <div class="式">I<sub>电池</sub> = 容量 × C数</div>
-      <div class="名">电池最大放电电流</div>
-      <div class="释">5 Ah × 25C = <i>125 A</i> 为整机总限，非单路瓶颈。</div>
-    </div>
-  </div>
-  <div class="卡 朱">
-    <div class="号">五</div>
-    <div class="式">t = E / P<sub>总</sub> = (U·C) / (4 · P<sub>悬停</sub>)</div>
-    <div class="名">悬停续航时间</div>
-    <div class="释">能量 <i>E = U·C</i>，整机悬停功率 <i>P<sub>总</sub> = 4·P<sub>单台</sub></i>。本案 <i>E = 111 Wh</i>。</div>
-  </div>
-
-  <!-- 叁 求解 -->
-  <div class="章">
-    <div class="序">叁</div>
-    <h2>求解 · 五问五答</h2>
-    <div class="批">分步推演</div>
-  </div>
-
-  <div class="卡">
-    <div class="式">问一 · 单台推力几何？</div>
-    <div class="释" style="text-align:left;border-top:none;padding-top:2px;">
-      悬停所需 <b>0.6 kgf</b>；满足推重比所需 <b>≥ 1.2 kgf</b>。二者合为单台电机之推力标尺。
-    </div>
-  </div>
-
-  <div class="卡 青">
-    <div class="式">问二 · 桨径上限制？</div>
-    <div class="释" style="text-align:left;border-top:none;padding-top:2px;">
-      D<sub>max</sub> = 360 − 20 = <b>340 mm</b>（约 <b>13.4 寸</b>）。凡桨径逾此者，两尖相啮，不可取。
-    </div>
-  </div>
-
-  <div class="卡 青">
-    <div class="式">问三 · 电流可容否？</div>
-    <div class="释" style="text-align:left;border-top:none;padding-top:2px;">
-      单路瓶颈为电机 <b>25 A</b>（电池 125 A、ESC 35 A 皆宽裕）。<br>
-      A 13.8 A · B 16.7 A · C 13.0 A · D 22.8 A —— <b>四者皆安</b>，D 余量最薄。
-    </div>
-  </div>
-
-  <div class="卡 朱">
-    <div class="式">问四 · 悬停续航几何？</div>
-    <div class="释" style="text-align:left;border-top:none;padding-top:2px;">
-      t = 111 / (4 · P) 　（单位换算为分钟：t = 111 × 60 / P<sub>总</sub>）
-    </div>
-    <div class="表外">
-      <table>
-        <tr><th>方案</th><th>悬停功率</th><th>整机功率</th><th>续航 t</th></tr>
-        <tr><td class="左">A 12×4.5×2</td><td>112 W</td><td>448 W</td><td class="优">14.9 min</td></tr>
-        <tr><td class="左">B 10×5×3</td><td>134 W</td><td>536 W</td><td>12.4 min</td></tr>
-        <tr><td class="左">C 11×7×2</td><td>125 W</td><td>500 W</td><td>13.3 min</td></tr>
-        <tr><td class="左">D 13×5×2</td><td>128 W</td><td>512 W</td><td>13.0 min</td></tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- 肆 综合判断 -->
-  <div class="章">
-    <div class="序">肆</div>
-    <h2>综合 · 四桨比校</h2>
-    <div class="批">权衡取舍</div>
-  </div>
-  <div class="表外">
-    <table>
-      <tr><th>方案</th><th>直径</th><th>最大推力</th><th>达标</th><th>电流余量</th><th>续航</th></tr>
-      <tr><td class="左">A 12×4.5×2</td><td>304.8</td><td>1.36</td><td class="优">达标</td><td class="优">充足</td><td class="优">最优</td></tr>
-      <tr><td class="左">B 10×5×3</td><td>254.0</td><td>1.31</td><td class="优">达标</td><td class="优">充足</td><td>较差</td></tr>
-      <tr><td class="左">C 11×7×2</td><td>279.4</td><td>1.12</td><td class="劣">不达标</td><td class="优">充足</td><td>中</td></tr>
-      <tr><td class="左">D 13×5×2</td><td>330.2</td><td>1.55</td><td class="优">达标</td><td class="劣">偏小</td><td>中</td></tr>
-    </table>
-  </div>
-
-  <div class="定论">
-    <div class="朱印">定论</div>
-    <h3>结 论</h3>
-    <p class="选">宜取 <b>A 桨</b>：12 × 4.5 × 2（双叶 · 12 寸）</p>
-    <p>一、推力有余：单台 1.36 kgf ＞ 1.2 kgf，静推重比之约不爽；C 桨 1.12 kgf，相去一间，汰之。</p>
-    <p>二、能效居首：悬停功率 112 W 为四者最低，续航约 15 分钟，最契「悬停·低速巡航」之用。</p>
-    <p>三、余量宽绰：电流 13.8 A 去电机极限 25 A 尚远，温升可控，可久可持。</p>
-    <p>四、尺寸合度：304.8 mm 在 340 mm 之限内，桨尖净距充裕，无相啮之虞。</p>
-    <p style="color:#c9bfa0;">D 桨虽力雄，然电流逼近极限、续航稍逊；权衡之下，A 桨力与能效得其中道。</p>
-  </div>
-
-  <div class="飞白">翼 轻 而 举 千 钧</div>
-
-  <footer>
-    <div class="线"></div>
-    飞鸢动力笺 · 四旋翼桨叶综合选型求解<br>
-    涂鸦为趣，墨韵为骨；数从台架，算以理成
-  </footer>
-
-</div>
-<div class="轴顶"></div>
+<main id="app"></main>
+<div id="nm-web-hint">🐸 奶龙魔改·网页版 —— 右下角 🎛 打开技能工坊（主动技能 / 开关 / 参数）</div>
 </body>
 </html>
